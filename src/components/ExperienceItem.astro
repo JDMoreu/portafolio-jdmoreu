@@ -38,7 +38,7 @@ const { title, company, description, link, date, tags } = Astro.props
     <ul class="flex flex-wrap mt-4 gap-2">
       {tags.map((tag) => (
         <li>
-          <span class={`flex gap-x-2 rounded-full text-xs text-cyan-400 text-semibold justify-center items-center bg-cyan-300/10 py-1 px-2 `}>
+          <span class={`flex gap-x-2 rounded-full text-xs text-cyan-400 font-semibold justify-center items-center bg-cyan-300/10 py-1 px-2 `}>
             {tag.name}
           </span>
         </li>
