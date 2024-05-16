@@ -1,0 +1,83 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const TAGS = {
+	IoT: {
+		name: "IoT",
+	},
+	Nodejs: {
+		name: "Node.js",
+	},
+	SQL: {
+		name: "SQL",
+	},
+	JavaScript: {
+		name: "JavaScript",
+	},
+	Thingsboard: {
+		name: "Thingsboard",
+	},
+	Docker: {
+		name: "Docker",
+	},
+	Ubuntu: {
+		name: "Ubuntu",
+	},
+	VPS: {
+		name: "VPS",
+	},
+	Python: {
+		name: "Python",
+	},
+	Crontab: {
+		name: "Crontab",
+	},
+	API: {
+		name: "API",
+	},
+	Bash: {
+		name: "Bash",
+	},
+
+
+}
+
+const SKIL ={
+	
+}
+
+const EXPERIENCIA = [
+	{
+		date: 'ACTUALMENTE',
+		title: 'Generente y desarrollador de software.',
+		company: 'MTechSolutions',
+		description: 'Gerente fundador y desarrollador de software en MTechSolutions S.A.S, una empresa de desarrollo de software en Santa Marta, Colombia.',
+		tags:[]
+	},
+	{
+		date: 'ACTUALMENTE',
+		title: 'Investigador auxiliar en componente de hardware y sofware.',
+		company: 'Ecomonte Colombia',
+		description: 'Brindar apoyo técnico integral a lo largo de todo el ciclo de vida de una solución tecnológica en el ámbito de la piscicultura. Esto incluye asesoría en el desarrollo de hardware y software, validación de resultados, asistencia técnica presencial y remota, participación en la divulgación de productos, y atención oportuna a requerimientos de interventoría y supervisión.',
+		tags: [TAGS.Thingsboard, TAGS.IoT, TAGS.Nodejs, TAGS.SQL, TAGS.JavaScript, TAGS.Docker, TAGS.VPS, TAGS.Python, TAGS.Crontab, TAGS.API, TAGS.Bash]
+	},
+	{
+		date: 'JUL 2023 - ENE 2024',
+		title: 'Investigador auxiliar en desarrollo de software.',
+		company: 'Ecomonte Colombia',
+		description: ' Asesorar en el desarrollo de componentes de software, hardware y aplicativos móviles para piscicultura; validar resultados de la solución tecnológica con datos de prueba y sugerir correcciones; brindar soporte técnico presencial y remoto ante inconvenientes con el módulo desarrollado, atendiendo requerimientos durante la ejecución del proyecto; y apoyar la atención de requerimientos de interventoría y supervisión.',
+		tags: [TAGS.Thingsboard, TAGS.IoT, TAGS.Nodejs, TAGS.SQL, TAGS.JavaScript, TAGS.Docker, TAGS.VPS, TAGS.Python, TAGS.Crontab, TAGS.API, TAGS.Bash]
+	},
+];
+---
+
+<ol class="relative">
+	{
+	  EXPERIENCIA.map((experiencie) => (
+		<li class="my-8">
+		  <ExperienceItem {...experiencie} />
+		</li>
+	  ))
+	}
+</ol>
+

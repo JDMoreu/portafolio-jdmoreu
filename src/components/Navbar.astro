@@ -1,0 +1,113 @@
+---
+import Github from "../icons/Github.astro"
+import Linkedin from "../icons/Linkedin.astro"
+import Mail from "../icons/Mail.astro"
+
+const navItems = [
+  {
+    title: "SOBRE",
+    label: "sobre-mi",
+    url: "/#sobre-mi",
+  },
+  {
+    title: "EXPERIENCIA",
+    label: "experiencia",
+    url: "/#experiencia",
+  },
+  {
+    title: "PROYECTOS",
+    label: "proyectos",
+    url: "/#proyectos",
+  }
+]
+---
+
+<header
+  class="flex flex-col justify-between gap-80"
+>
+
+  <nav
+    class="nav hidden lg:block text-xs font-bold"
+  >
+    {
+      navItems.map((link) => (
+        <a
+          class="group flex items-center py-3 text-gray-400/90" 
+          aria-label={link.label}
+          href={link.url}
+        >
+          <span 
+          class="mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-focus-visible:w-16 group-focus-visible:bg-gray-200 motion-reduce:transition-none"
+          aria-label={link.label}
+          >
+          </span>
+          {link.title}
+        </a>
+      ))
+    }
+  </nav>
+
+  <div class="flex flex-row pl-4 gap-6 items-center opacity-90"> 
+    <a href="https://github.com/JDMoreu" target="_blank" rel="noopener noreferrer" class="hover:scale-110">
+      <Github class="size-4 lg:size-7" fill="#ffffff"/>
+    </a>
+    <a href="https://www.linkedin.com/in/jdmoreu/" target="_blank" rel="noopener noreferrer" class="hover:scale-110">
+      <Linkedin class="size-4 lg:size-7" fill="#ffffff"/>
+    </a>
+    <a href="mailto:jdmoreudev@gmial.com" class="hover:scale-110">
+      <Mail class="size-4 lg:size-7" fill="#ffffff"/>
+    </a>
+  </div>
+
+</header>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+
+    const sections = document.querySelectorAll("section")
+    const navItems = document.querySelectorAll("header nav a")
+
+    const callback = (entries: any[]) => {
+      entries.forEach((entry) => {
+        
+        if (entry.isIntersecting) {
+          navItems.forEach((item) => {
+            if (item.getAttribute("aria-label") == entry.target.id) {
+              item.classList.remove("text-gray-400/90")
+              item.classList.add("[&>span]:w-16")
+              item.classList.add("[&>span]:bg-gray-200")
+            } else {
+              item.classList.add("text-gray-400/90")
+              item.classList.remove("[&>span]:w-16")
+              item.classList.remove("[&>span]:bg-gray-200")
+            }
+          })
+        }
+
+      })
+    }
+
+    
+
+    const observer = new IntersectionObserver(callback, {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.3,
+    })
+
+    sections.forEach((section) => {
+      observer.observe(section)
+    })
+
+    // Cleanup function
+    document.onvisibilitychange = () => {
+      if (document.visibilityState === "hidden") {
+        observer.disconnect()
+      } else {
+        sections.forEach((section) => {
+          observer.observe(section)
+        })
+      }
+    }
+  })
+</script>

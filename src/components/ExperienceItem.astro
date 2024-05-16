@@ -1,0 +1,49 @@
+---
+
+interface Props {
+  title: string
+  company: string
+  description: string
+  link?: string
+  date: string
+  tags: { name: string }[]
+}
+
+const { title, company, description, link, date, tags } = Astro.props
+---
+
+<div
+  class="flex flex-row gap-12 justify-center w-full p-6 hover:border-white/5 hover:rounded-md hover:bg-white/5 hover:shadow-lg "
+>
+  
+  <div class="relative flex flex-col gap-2 pb-4 md:col-span-3">
+
+    <div class="flex justify-between">
+      <h3 class="text-xl font-semibold">
+        {company}
+      </h3>
+      <span class="ml-2 text-gray-400/80 text-xs font-ligh">
+        {date}
+      </span>
+    </div>
+
+      <span class="opacity-80">
+        {title}
+      </span>
+
+    <p class="opacity-80 font-thin text-justify">
+      {description}
+    </p>
+
+    <ul class="flex flex-wrap mt-4 gap-2">
+      {tags.map((tag) => (
+        <li>
+          <span class={`flex gap-x-2 rounded-full text-xs text-cyan-400 text-semibold justify-center items-center bg-cyan-300/10 py-1 px-2 `}>
+            {tag.name}
+          </span>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+</div>
