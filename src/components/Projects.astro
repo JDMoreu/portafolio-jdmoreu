@@ -87,17 +87,17 @@ const PROJECTS = [
 	{
 		PROJECTS.map(({ image, title, description, tags }) => (
 
-			<article class="flex flex-row gap-4 py-4 px-4  hover:border-white/5 hover:rounded-md hover:bg-white/5 hover:shadow-lg">
+			<article class="flex flex-col gap-4 py-4 px-4 hover:border-white/5 hover:rounded-md hover:bg-white/5 hover:shadow-lg">
 
-				<div class="w-[25%] h-full">
-					<div class="relative flex flex-col items-center ">
+				<div class=" place-content-center">
+					<div class="relative flex flex-col">
 
-						<img alt={title} class="object-cover object-top rounded-md border-2 border-white/5 border-sm " src={image} />
+						<img alt={title} class="object-cover object-top rounded-md border-2 border-white/5 border-sm" src={image} />
 
 					</div>
 				</div>
 
-				<div class="w-[80%]">
+				<div class="">
 					<span class="flex gap-x-2 items-center">
 					<h3 class=" font-bold">
 						{title}
