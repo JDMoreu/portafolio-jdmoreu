@@ -22,10 +22,12 @@ const { title, company, description, link, date, tags } = Astro.props
       <h3 class="font-semibold">
         {company}
       </h3>
-      <span class="ml-2 text-gray-400/80 text-xs font-ligh">
+      <span class="ml-2 pt-1 text-gray-400/80 text-xs font-ligh">
         {date}
       </span>
     </div>
+
+    <div class="items-center">
 
       <span class="opacity-95">
         {title}
@@ -34,6 +36,9 @@ const { title, company, description, link, date, tags } = Astro.props
     <p class="opacity-80 font-thin text-justify">
       {description}
     </p>
+
+    </div>
+
 
     <ul class="flex flex-wrap mt-4 gap-2">
       {tags.map((tag) => (
