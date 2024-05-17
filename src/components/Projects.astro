@@ -63,20 +63,23 @@ const PROJECTS = [
 	title: 'PechNet',
 	description: 'Brinda una solución que permita hacer públicos tus servidores locales de manera sencilla y segura, sin necesidad de modificar tu red doméstica.',
 	image: '/projects/pechnet.webp',
-	tags: [TAGS.VPS, TAGS.Linux, TAGS.Iptables, TAGS.Forwarding, TAGS.Bash, TAGS.Headscale, TAGS.Tailscale]
-  },
+	tags: [TAGS.VPS, TAGS.Linux, TAGS.Iptables, TAGS.Forwarding, TAGS.Bash, TAGS.Headscale, TAGS.Tailscale],
+	link: 'https://github.com/JDMoreu/PechNet'
+},
   {
 	title: 'Plataforma IoT para Tilapia',
 	description: 'Plataforma de monitoreo IoT para supervisar y controlar la gestión acuícola en la cría de tilapias en Cesar, Colombia, en colaboración con Ecomonte Colombia.',
 	image: '/projects/dashboard_tilapia.webp',
-	tags: [TAGS.Thingsboard, TAGS.IoT, TAGS.Nodejs, TAGS.SQL, TAGS.JavaScript, TAGS.Docker, TAGS.VPS, TAGS.Python, TAGS.Crontab, TAGS.API, TAGS.Bash]
-  },
+	tags: [TAGS.Thingsboard, TAGS.IoT, TAGS.Nodejs, TAGS.SQL, TAGS.JavaScript, TAGS.Docker, TAGS.VPS, TAGS.Python, TAGS.Crontab, TAGS.API, TAGS.Bash],
+	link: 'https://thingsboard.ecomonte.com.co/'
+},
   {
 	title: 'Plataforma IoT para Mango',
 	description: 'Plataforma de monitoreo IoT para supervisar y controlar la gestión agrícola de los cultivos de mango en Cesar, Colombia, en colaboración con Ecomonte Colombia.',
 	image: '/projects/dashboard_mango.webp',
-	tags: [TAGS.Thingsboard, TAGS.IoT, TAGS.Nodejs, TAGS.SQL, TAGS.JavaScript, TAGS.Docker, TAGS.VPS, TAGS.Python, TAGS.Crontab, TAGS.API, TAGS.Bash]
-  },
+	tags: [TAGS.Thingsboard, TAGS.IoT, TAGS.Nodejs, TAGS.SQL, TAGS.JavaScript, TAGS.Docker, TAGS.VPS, TAGS.Python, TAGS.Crontab, TAGS.API, TAGS.Bash],
+	link: 'https://thingsboard.ecomonte.com.co/'
+},
 
 
 ]
@@ -85,49 +88,59 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16 ">
 	{
-		PROJECTS.map(({ image, title, description, tags }) => (
+		PROJECTS.map(({ image, title, description, link, tags }) => (
 
-			<article class="flex flex-col gap-4 py-4 px-4 hover:border-white/5 hover:rounded-md hover:bg-white/5 hover:shadow-lg">
 
-				<div class=" place-content-center">
-					<div class="relative flex flex-col">
+			<a href={link}>
 
-						<img alt={title} class="object-cover object-top rounded-md border-2 border-white/5 border-sm" src={image} />
+			
 
+				<article class="flex flex-col gap-4 py-4 px-4 hover:border-white/5 hover:rounded-md hover:bg-white/5 hover:shadow-lg [&>div>span>span]:hover:pb-1">
+
+					<div class="place-content-center">
+						<div class="relative flex flex-col">
+
+							<img alt={title} class="object-cover object-top rounded-md border-2 border-white/5 border-sm" src={image} />
+
+						</div>
 					</div>
-				</div>
 
-				<div class="">
-					<span class="flex gap-x-2 items-center">
-					<h3 class=" font-bold">
-						{title}
-					</h3>
+					<div class="">
+						<span class="flex gap-x-2 items-center">
+						<h3 class=" font-bold">
+							{title}
+						</h3>
+						<span class="opacity-70">
 						<LinkIcon class="size-4" fill="#ffffff" />
-					</span>
-					<div class="flex flex-wrap">
+						</span>
 
-						<div class="mt-2 opacity-80 font-thin text-justify">{description}</div>
+						</span>
+						<div class="flex flex-wrap">
 
-						{
-							tags && (
+							<div class="mt-2 opacity-80 font-thin text-justify">{description}</div>
 
-								<ul class="flex flex-wrap mt-4 gap-2">
-									{tags.map((tag) => (
-										<li>
-											<span class={`flex gap-x-2 rounded-full text-xs text-cyan-400 font-semibold justify-center items-center bg-cyan-300/10 py-1 px-2 `}>
-												{tag.name}
-											</span>
-										</li>
-									))}
-								</ul>
+							{
+								tags && (
 
-							)
+									<ul class="flex flex-wrap mt-4 gap-2">
+										{tags.map((tag) => (
+											<li>
+												<span class={`flex gap-x-2 rounded-full text-xs text-cyan-400 font-semibold justify-center items-center bg-cyan-300/10 py-1 px-2 `}>
+													{tag.name}
+												</span>
+											</li>
+										))}
+									</ul>
 
-						}
+								)
 
+							}
+
+						</div>
 					</div>
-				</div>
-			</article>
+				</article>
+
+			</a>
 		))
 	}
 </div>
