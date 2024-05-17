@@ -97,27 +97,20 @@ const PROJECTS = [
 
 				<article class="flex flex-col gap-4 py-4 px-4 hover:border-white/5 hover:rounded-md hover:bg-white/5 hover:shadow-lg [&>div>span>span]:hover:pb-1">
 
-					<div class="place-content-center">
-						<div class="relative flex flex-col">
-
-							<img alt={title} class="object-cover object-top rounded-md border-2 border-white/5 border-sm" src={image} />
-
-						</div>
-					</div>
-
 					<div class="">
 						<span class="flex gap-x-2 items-center">
-						<h3 class=" font-bold">
-							{title}
-						</h3>
-						<span class="opacity-70">
-						<LinkIcon class="size-4" fill="#ffffff" />
+							<h3 class=" font-bold">
+								{title}
+							</h3>
+							<span class="opacity-70">
+								<LinkIcon class="size-4" fill="#ffffff" />
+							</span>
 						</span>
 
-						</span>
 						<div class="flex flex-wrap">
 
 							<div class="mt-2 opacity-80 font-thin text-justify">{description}</div>
+
 
 							{
 								tags && (
@@ -135,6 +128,14 @@ const PROJECTS = [
 								)
 
 							}
+
+							<div class="flex flex-row justify-center mt-5">
+								<div class="relative flex flex-col">
+
+									<img alt={title} class="object-cover object-top rounded-md border-2 border-white/5 border-sm" src={image} />
+
+								</div>
+							</div>
 
 						</div>
 					</div>
