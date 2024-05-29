@@ -56,9 +56,31 @@ const TAGS = {
 	API: {
 		name: "API",
 	},
+	Astro: {
+		name: "Astro",
+	},
+	React: {
+		name: "React",
+	},
+	Tailwind: {
+		name: "Tailwind CSS",
+	},
+	TypeScript: {
+		name: "TypeScript",
+	},
+	CSS: {
+		name: "CSS",
+	},
 }
 
 const PROJECTS = [
+  {
+	title: 'Landing Page para Mtechsolutions',
+	description: 'Realización de una landing page para la empresa Mtechsolutions, con el objetivo de mostrar sus servicios y productos de manera atractiva y profesional.',
+	image: '/projects/mtechsolutions.webp',
+	tags: [TAGS.Astro, TAGS.React, TAGS.JavaScript, TAGS.Tailwind, TAGS.TypeScript, TAGS.CSS],
+	link: 'https://mtechsolutions.app/'
+  },
   {
 	title: 'PechNet',
 	description: 'Brinda una solución que permite hacer públicos tus servidores locales de manera sencilla y segura, sin necesidad de modificar tu red doméstica.',
@@ -109,7 +131,7 @@ const PROJECTS = [
 
 						<div class="flex flex-wrap">
 
-							<div class="mt-2 opacity-80 font-thin text-justify">{description}</div>
+							<div class="mt-2 opacity-80 font-thin">{description}</div>
 
 
 							{
