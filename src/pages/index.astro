@@ -18,21 +18,25 @@ import UserIcon from "../icons/User.astro";
   title="Portafolio JDMoreu - Desarrollador y Especialista TI."
   description="Contrata a JDMoreu para tus proyectos de desarrollo de software y administración de sistemas. Ingeniero Electrónico y desarrollador de software. Especialista en arquitectura de soluciones de TI."
 >
-  <main class="lg:flex lg:justify-between lg:gap-4 lg:mx-[10%] lg:px-[10%] mx-[4%] ">
+  <main class="lg:flex lg:justify-between lg:gap-8 lg:mx-[10%] lg:px-[5%] mx-[4%] ">
     
-    <div class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col pt-[5%] px-5">
+    <div class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col">
+
+      <div class="   mt-8">
+
+        <SectionContainer class="mb-12">
+          <Resume/>
+        </SectionContainer>
+        
+        <SectionContainer>
+          <Navbar/>
+        </SectionContainer>
+      </div>
       
-      <SectionContainer class="mb-12">
-        <Resume/>
-      </SectionContainer>
-      
-      <SectionContainer>
-        <Navbar/>
-      </SectionContainer>
       
     </div>
     
-    <div class="lg:w-1/2 pt-[5%]">
+    <div class="lg:w-10/12 pt-[5%]">
       
 
       <SectionContainer id="experiencia" class="py-12  ">
