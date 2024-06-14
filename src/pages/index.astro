@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Resume from "../components/Resume.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
@@ -10,6 +9,9 @@ import Navbar from "../components/Navbar.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import CodeIcon from "../icons/Code.astro";
 import UserIcon from "../icons/User.astro";
+import Download from "../components/Download.astro";
+import Hero from "../components/Hero.astro";
+import ModalContact from "../components/ModalContact.astro";
 
 
 ---
@@ -18,28 +20,32 @@ import UserIcon from "../icons/User.astro";
   title="Portafolio JDMoreu - Desarrollador y Especialista TI."
   description="Contrata a JDMoreu para tus proyectos de desarrollo de software y administración de sistemas. Ingeniero Electrónico y desarrollador de software. Especialista en arquitectura de soluciones de TI."
 >
-  <main class="lg:flex lg:justify-between lg:gap-8 lg:mx-[10%] lg:px-[5%] mx-[4%] ">
-    
-    <div class="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:flex-col">
+  <main class="grid lg:grid-cols-5 lg:justify-between lg:gap-8 lg:mx-10 lg:px-10 ">
 
-      <div class="mt-20">
-
-        <SectionContainer class="mb-12">
-          <Resume/>
-        </SectionContainer>
+    <div class="lg:fixed z-10 lg:top-0 lg:flex w-full ">
         
         <SectionContainer>
           <Navbar/>
         </SectionContainer>
-      </div>
-      
-      
+
+
     </div>
+
+    <div class="grid lg:col-span-1"></div>
     
-    <div class="lg:w-10/12 pt-[5%] ">
+    <div class="grid lg:col-span-3 px-10">
+
+
+      <SectionContainer id="inicio" class="lg:pt-60 pb-10 lg:my-20 my-10">
+        <TitelBar>
+            <Briefcase class="size-6" fill="#ffffff" />
+            <h1 class="text-xl text-nowrap uppercase font-bold">Inicio</h1>
+        </TitelBar>
+         <Hero />
+      </SectionContainer>
       
 
-      <SectionContainer id="experiencia" class="py-20  mb-40">
+      <SectionContainer id="experiencia" class="py-20  lg:my-20">
         <TitelBar>
             <Briefcase class="size-6" fill="#ffffff" />
             <h1 class="text-xl text-nowrap uppercase font-bold">Experiencia Laboral</h1>
@@ -47,7 +53,7 @@ import UserIcon from "../icons/User.astro";
          <Experience />
       </SectionContainer>
    
-      <SectionContainer id="proyectos" class="py-20 mb-40 ">
+      <SectionContainer id="proyectos" class="py-20 lg:mb-40 ">
         <TitelBar>
           <CodeIcon class="size-6" fill="#ffffff" />
           <h1 class="text-xl text-nowrap uppercase font-bold">Proyectos</h1>
@@ -64,11 +70,19 @@ import UserIcon from "../icons/User.astro";
       </SectionContainer>
 
 
-      <footer class="flex flex-col text-center opacity-70 pb-10 mt-10">
+      <footer class="flex flex-col text-center opacity-70 pb-10">
         <p class="text-xs">
           © 2024 JDMoreu. Todos los derechos reservados. Hecho con ❤️ desde Santa Marta, Colombia.
         </p>
       </footer>
+
+    </div>
+
+    <div class="grid col-span-1">
+
+      <SectionContainer class="">
+        <Download/>
+      </SectionContainer>
 
     </div>
 

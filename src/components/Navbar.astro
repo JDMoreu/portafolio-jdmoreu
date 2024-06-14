@@ -1,9 +1,16 @@
 ---
+
 import Github from "../icons/Github.astro"
 import Linkedin from "../icons/Linkedin.astro"
 import Mail from "../icons/Mail.astro"
+import Whatsapp from "../icons/Whatsapp.astro"
 
 const navItems = [
+  {
+    title: "INICIO",
+    label: "inicio",
+    url: "/#inicio",
+  },
   {
     title: "EXPERIENCIA",
     label: "experiencia",
@@ -18,16 +25,18 @@ const navItems = [
     title: "SOBRE MI",
     label: "sobre-mi",
     url: "/#sobre-mi",
-  }
+  },
 ]
 ---
 
 <header
-  class="flex flex-col"
+  class=" hidden lg:flex items-center justify-between py-4 px-20 bg-gray-900  fixed top-0 left-0 w-full z-10"
 >
 
+<h1 class="text-2xl font-bold">Portafolio</h1>
+
   <nav
-    class="nav hidden lg:block text-xs font-bold"
+    class="nav hidden lg:gap-12 lg:flex text-sm font-semibold"
   >
     {
       navItems.map((link) => (
@@ -36,28 +45,35 @@ const navItems = [
           aria-label={link.label}
           href={link.url}
         >
-          <span 
-          class="mr-4 h-px w-8 bg-gray-600 transition-all group-hover:w-16 group-hover:bg-gray-200 group-focus-visible:w-16 group-focus-visible:bg-gray-200 motion-reduce:transition-none"
-          aria-label={link.label}
-          >
-          </span>
+
           {link.title}
         </a>
       ))
     }
   </nav>
 
-  <div class="flex flex-row gap-2 items-center lg:mt-96"> 
+
+  <div class="flex flex-row items-center"> 
+
     <a href="https://github.com/JDMoreu" target="_blank" rel="noopener noreferrer" class="opacity-75 rounded-2xl px-4 py-2 hover:scale-105 hover:opacity-100 flex items-center gap-2">
-      <Github class="size-7" fill="#ffffff"/> 
+      <Github class="size-6" fill="#ffffff"/> 
     </a>
     <a href="https://www.linkedin.com/in/jdmoreu/" target="_blank" rel="noopener noreferrer" class="opacity-75 rounded-2xl px-4 py-2 hover:scale-105 hover:opacity-100 flex items-center gap-2">
-      <Linkedin class="size-7" fill="#ffffff"/> 
+      <Linkedin class="size-6" fill="#ffffff"/> 
     </a>
-    <a href="mailto:jdmoreudev@gmial.com" class="opacity-75 rounded-2xl px-4 py-2 hover:scale-105 hover:opacity-100 flex items-center gap-2">
-      <Mail class="size-7" fill="#ffffff"/> 
+
+    <a href="https://wa.link/p5prj1" target="_blank" rel="noopener noreferrer" class="opacity-75 rounded-2xl px-4 py-2 hover:scale-105 hover:opacity-100 flex items-center gap-2">
+      <Whatsapp class="size-6" fill="#ffffff"/> 
     </a> 
+
+    <a href="mailto:jdmoreudev@gmial.com" class="opacity-75 rounded-2xl px-4 py-2 hover:scale-105 hover:opacity-100 flex items-center gap-2">
+      <Mail class="size-6" fill="#ffffff"/> 
+    </a> 
+
+    
   </div>
+
+
 
 </header>
 
