@@ -11,6 +11,7 @@ import CodeIcon from "../icons/Code.astro";
 import UserIcon from "../icons/User.astro";
 import Download from "../components/Download.astro";
 import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
 
 
 ---
@@ -21,21 +22,16 @@ import Hero from "../components/Hero.astro";
 >
   <main class="grid lg:grid-cols-5 lg:justify-between lg:gap-8 lg:mx-10 lg:px-10 ">
 
-    <div class="lg:fixed z-10 lg:top-0 lg:flex w-full ">
-        
-        <SectionContainer>
-          <Navbar/>
-        </SectionContainer>
-
-
+    <div class="lg:fixed z-10 lg:top-0 lg:flex w-full"> 
+      <Navbar/>
     </div>
 
     <div class="grid lg:col-span-1"></div>
     
-    <div class="grid lg:col-span-3 px-10">
+    <div class="grid lg:col-span-3 lg:gap-y-20 px-10">
 
 
-      <SectionContainer id="inicio" class="lg:pt-60 pb-10 lg:my-20 my-10">
+      <SectionContainer id="inicio" class="mb-10 py-10 lg:pt-60 lg:my-20">
         <TitelBar>
             <Briefcase class="size-6" fill="#ffffff" />
             <h1 class="text-xl text-nowrap uppercase font-bold">Inicio</h1>
@@ -43,8 +39,7 @@ import Hero from "../components/Hero.astro";
          <Hero />
       </SectionContainer>
       
-
-      <SectionContainer id="experiencia" class="py-20  lg:my-20">
+      <SectionContainer id="experiencia" class="py-20 lg:py-20 lg:my-10">
         <TitelBar>
             <Briefcase class="size-6" fill="#ffffff" />
             <h1 class="text-xl text-nowrap uppercase font-bold">Experiencia Laboral</h1>
@@ -52,6 +47,14 @@ import Hero from "../components/Hero.astro";
          <Experience />
       </SectionContainer>
    
+      <SectionContainer id="proyectos" class="py-20 lg:mb-20 ">
+        <TitelBar>
+          <CodeIcon class="size-6" fill="#ffffff" />
+          <h1 class="text-xl text-nowrap uppercase font-bold">Servicios</h1>
+        </TitelBar>
+        <Services />
+      </SectionContainer>
+
       <SectionContainer id="proyectos" class="py-20 lg:mb-40 ">
         <TitelBar>
           <CodeIcon class="size-6" fill="#ffffff" />
