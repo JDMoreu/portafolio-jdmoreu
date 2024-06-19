@@ -1,0 +1,102 @@
+ <!-- Modal toggle -->
+ <button data-modal-target="static-modal" data-modal-toggle="static-modal" class="block bg-blue-700 text-gray-200 text-sm font-medium hover:bg-gray-200 hover:text-blue-700 py-2 px-4 rounded-2xl" type="button">
+	Ver planes
+  </button>
+  
+  <!-- Main modal -->
+  <div id="static-modal" data-modal-backdrop="static" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+	<div class="relative p-4 w-full max-w-2xl max-h-full">
+	  <!-- Modal content -->
+	  <div class="relative bg-white rounded-lg shadow dark:bg-gray-800">
+		<!-- Modal header -->
+		<div class="flex items-center justify-between p-2 rounded-t dark:border-gray-600">
+		  <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="static-modal">
+			<svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+			  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+			</svg>
+			<span class="sr-only">Close modal</span>
+		  </button>
+		</div>
+		<!-- Modal body -->
+		<div class=" ">
+
+		  <div class="bg-white dark:bg-gray-800">
+			<div class="container px-6 py-8 mx-auto">
+			  <p class="text-xl text-center text-gray-500 dark:text-gray-300">
+				Selecciona tu plan
+			  </p>
+		  
+			  <h1 class="mt-4 text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Tipos de planes</h1>
+		  
+			  <div class="mt-6 space-y-8 xl:mt-12">
+				<div id="plan-basico" class="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border cursor-pointer rounded-xl dark:border-gray-700">
+				  <div class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
+					  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+					</svg>
+	
+					<div class="flex flex-col items-center mx-5 space-y-1">
+					  <h2 class="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Básico</h2>
+					  <div class="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
+						Ahorra 20%
+					  </div>
+					</div>
+				  </div>
+	
+				  <h2 class="text-2xl font-semibold text-gray-500 sm:text-3xl dark:text-gray-300">$33.000 <span class="text-base font-medium">/Hora</span></h2>
+				</div>
+	
+				<div id="plan-popular" class="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border border-blue-500 cursor-pointer rounded-xl">
+				  <div class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-blue-600 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
+					  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+					</svg>
+	
+					<div class="flex flex-col items-center mx-5 space-y-1">
+					  <h2 class="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Popular</h2>
+					  <div class="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
+						Ahorra 20%
+					  </div>
+					</div>
+				  </div>
+	
+				  <h2 class="text-2xl font-semibold text-blue-600 sm:text-4xl">$190.000 <span class="text-base font-medium">/Día</span></h2>
+				</div>
+	
+				<div id="plan-avanzado" class="flex items-center justify-between max-w-2xl px-8 py-4 mx-auto border cursor-pointer rounded-xl dark:border-gray-700">
+				  <div class="flex items-center">
+					<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 sm:h-9 sm:w-9" viewBox="0 0 20 20" fill="currentColor">
+					  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+					</svg>
+	
+					<div class="flex flex-col items-center mx-5 space-y-1">
+					  <h2 class="text-lg font-medium text-gray-700 sm:text-2xl dark:text-gray-200">Avanzado</h2>
+					  <div class="px-2 text-xs text-blue-500 bg-gray-100 rounded-full sm:px-4 sm:py-1 dark:bg-gray-700 ">
+						Ahorra 20%
+					  </div>
+					</div>
+				  </div>
+	
+				  <h2 class="text-2xl font-semibold text-gray-500 sm:text-3xl dark:text-gray-300">$------ <span class="text-base font-medium">/Mes</span></h2>
+				</div>
+	
+				<div class="flex justify-center">
+				  <button id="seleccionar-plan" class="px-8 py-2 tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-2xl hover:bg-blue-500 focus:outline-none focus:bg-blue-500 focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+					Seleccionar
+				  </button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+
+		</div>
+		<!-- Modal footer -->
+		<div class="flex items-center p-2 border-gray-200 rounded-b dark:border-gray-600">
+		</div>
+
+	  </div>
+	</div>
+  </div>
+</div>
+
+
